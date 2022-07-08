@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1657194933",
+        "python_version": "3.8.2 (default, Jun  8 2021, 11:59:35) \n[Clang 12.0.5 (clang-1205.0.22.11)]",
+        "command_line_arguments": "/Users/mask/python-envs/mlagents-env/bin/mlagents-learn circle.yaml --run-id=circle4 --force",
+        "mlagents_version": "0.26.0",
+        "mlagents_envs_version": "0.26.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.8.1",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1657194934"
+    },
+    "total": 1.056445708,
+    "count": 1,
+    "self": 0.008234292000000032,
+    "children": {
+        "run_training.setup": {
+            "total": 0.040303486,
+            "count": 1,
+            "self": 0.040303486
+        },
+        "TrainerController.start_learning": {
+            "total": 1.00790793,
+            "count": 1,
+            "self": 7.792999999955974e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 1.007798951,
+                    "count": 1,
+                    "self": 1.007798951
+                },
+                "TrainerController._save_models": {
+                    "total": 3.104900000039379e-05,
+                    "count": 1,
+                    "self": 3.104900000039379e-05
+                }
+            }
+        }
+    }
+}

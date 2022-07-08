@@ -1,0 +1,29 @@
+{
+    "CircleBeh": {
+        "checkpoints": [
+            {
+                "steps": 12045,
+                "file_path": "results/circle2/CircleBeh/CircleBeh-12045.onnx",
+                "reward": 3.3932917714118958,
+                "creation_time": 1657195240.463105,
+                "auxillary_file_paths": [
+                    "results/circle2/CircleBeh/CircleBeh-12045.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 12045,
+            "file_path": "results/circle2/CircleBeh.onnx",
+            "reward": 3.3932917714118958,
+            "creation_time": 1657195240.463105,
+            "auxillary_file_paths": [
+                "results/circle2/CircleBeh/CircleBeh-12045.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.26.0",
+        "torch_version": "1.8.1"
+    }
+}
