@@ -1,0 +1,29 @@
+{
+    "SphereBeh": {
+        "checkpoints": [
+            {
+                "steps": 184263,
+                "file_path": "results/NewRun4/SphereBeh/SphereBeh-184263.onnx",
+                "reward": null,
+                "creation_time": 1657543394.026243,
+                "auxillary_file_paths": [
+                    "results/NewRun4/SphereBeh/SphereBeh-184263.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 184263,
+            "file_path": "results/NewRun4/SphereBeh.onnx",
+            "reward": null,
+            "creation_time": 1657543394.026243,
+            "auxillary_file_paths": [
+                "results/NewRun4/SphereBeh/SphereBeh-184263.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.26.0",
+        "torch_version": "1.8.1"
+    }
+}

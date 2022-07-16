@@ -11,10 +11,18 @@ public class SphereAgent : Agent
     [SerializeField] private Text score;
     [SerializeField] private Text bestScore;
     [SerializeField] private Text time;
+    [SerializeField] private Text iteration;
     Rigidbody rBody;
 
     private float _score = 0;
     private float _bestScore = 0;
+    private int _iteration = 0;
+
+    private void NewIteration()
+    {
+        _iteration++;
+        iteration.text = _iteration.ToString();
+    }
     
     private void SetBestScore()
     {
@@ -51,6 +59,7 @@ public class SphereAgent : Agent
     public Transform plane;
     public override void OnEpisodeBegin()
     {
+        NewIteration();
         SetBestScore();
         SetScore(0);
         // If the Agent fell, zero its momentum
@@ -77,7 +86,7 @@ public class SphereAgent : Agent
     {
         // Target and Agent positions
         sensor.AddObservation(this.transform.localPosition);
-        //sensor.AddObservation(plane.localRotation);
+        sensor.AddObservation(plane.localRotation);
 
         // Agent velocity
         sensor.AddObservation(rBody.velocity.x);
@@ -98,8 +107,11 @@ public class SphereAgent : Agent
         // Actions, size = 3
         Vector3 controlSignal = Vector3.zero;
         controlSignal.x = actionBuffers.ContinuousActions[0];
-       // controlSignal.y = actionBuffers.ContinuousActions[1];
+    
         controlSignal.z = actionBuffers.ContinuousActions[1];
+        
+        
+         //controlSignal.y = actionBuffers.ContinuousActions[2];
         
         rBody.AddForce(controlSignal * forceMultiplier);
 
@@ -115,7 +127,7 @@ public class SphereAgent : Agent
         }
 
         // Fell off platform
-        else if (this.transform.localPosition.y < -1.5f)
+        else if (this.transform.localPosition.y < -3.5f)
         {
             SetReward(- 1.0f);
             EndEpisode();
